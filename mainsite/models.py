@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+import os
 import csv
 # Create your models here.
 
@@ -16,15 +17,11 @@ class Post(models.Model):
         return self.title
 
 class StationTPTC(models.Model):
-    stations = []
     with open('staticfiles/station_TPTC.csv','r', encoding='utf-8-sig') as csvFile:
         rows = csv.reader(csvFile, delimiter=',')
-        for row in rows:
-            print("models.py的欄位輸出測試：")
-            print(row)
-            stations.append(row)
-    i = 0
-    for s in stations:
-        s[i] = models.PositiveIntegerField(default=0)
-        i = i+1 
+        print(rows)
+#    i = 0
+#    for s in rows:
+#        s[i] = models.PositiveIntegerField(default=0)
+#        i = i+1 
 
