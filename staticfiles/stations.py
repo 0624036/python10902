@@ -8,4 +8,4 @@ class Station():
 		for row in rows:
 			print(row)
 			stations.append(row)
-	return stations
+
