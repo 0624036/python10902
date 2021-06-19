@@ -1,0 +1,100 @@
+<h1>流量分析</h1>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">首頁</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            官方網站
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="https://www.railway.gov.tw/tra-tip-web/tip">台灣鐵路</a></li>
+            <li><a class="dropdown-item" href="https://www.thsrc.com.tw/">台灣高鐵</a></li>
+            <li><a class="dropdown-item" href="https://www.krtc.com.tw/">高雄捷運</a></li>
+            <li><a class="dropdown-item" href="https://www.metro.taipei/">台北捷運</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            台灣鐵路
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/#/">2018</a></li>
+            <li><a class="dropdown-item" href="#">2019</a></li>
+            <li><a class="dropdown-item" href="#">2020</a></li>
+            <li><a class="dropdown-item" href="#">2021</a></li>
+            <li><a class="dropdown-item" href="#">六神</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            台灣高鐵
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">啟程</a></li>
+            <li><a class="dropdown-item" href="#">再出發</a></li>
+            <li><a class="dropdown-item" href="#">廣闊的世界</a></li>
+            <li><a class="dropdown-item" href="#">神話再現</a></li>
+            <li><a class="dropdown-item" href="#">烏雲</a></li>
+            <li><a class="dropdown-item" href="#">奮起</a></li>
+            <li><a class="dropdown-item" href="#">三人行</a></li>
+            <li><a class="dropdown-item" href="#">出航</a></li>
+            <li><a class="dropdown-item" href="#">各自的使命</a></li>
+            <li><a class="dropdown-item" href="#">王者應如是</a></li>
+            <li><a class="dropdown-item" href="#">圈套</a></li>
+            <li><a class="dropdown-item" href="#">危在旦夕的世界</a></li>
+            <li><a class="dropdown-item" href="#">奪回</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://youtu.be/FwlqDmgCVvM">返鄉(最終章)</a></li>
+          </ul>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            台北捷運
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/sword/">剣</a></li>
+            <li><a class="dropdown-item" href="/bs/">大剣</a></li>
+            <li><a class="dropdown-item" href="#">短剣</a></li>
+            <li><a class="dropdown-item" href="#">槍</a></li>
+            <li><a class="dropdown-item" href="#">銃</a></li>
+            <li><a class="dropdown-item" href="#">盾</a></li>
+            <li><a class="dropdown-item" href="#">マシンナリィ(機械)</a></li>
+            <li><a class="dropdown-item" href="#">ファントムソード(幻影劍)</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">戒指</a></li>
+            <li><a class="dropdown-item" href="#">魔法</a></li>
+            <li><a class="dropdown-item" href="#">飾品</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            高雄捷運
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/#/">路西斯王國</a></li>
+            <li><a class="dropdown-item" href="#">歐爾提謝</a></li>
+            <li><a class="dropdown-item" href="#">特涅布拉耶王國</a></li>
+            <li><a class="dropdown-item" href="#">尼弗爾海姆帝國</a></li>
+            <li><a class="dropdown-item" href="#">六神</a></li>
+          </ul>
+        </li>
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="/admin/" tabindex="-1">管理後臺</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout/" tabindex="-1">登出</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="/admin/" tabindex="-1">登入</a>
+        </li>
+        {% endif %}
+    </div>
+  </div>
+</nav>
