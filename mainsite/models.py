@@ -17,9 +17,10 @@ class Post(models.Model):
         return self.title
 
 class StationTPTC(models.Model):
-    with open('staticfiles/station_TPTC.csv','r', encoding='utf-8-sig') as csvFile:
-        rows = csv.reader(csvFile, delimiter=',')
-        print(rows)
+    with open('../staticfiles/station_TPTC.csv','r', encoding='utf-8-sig', newline='') as csvFile:
+        reader = csv.reader(csvFile, delimiter=',')
+        for row in reader:
+            pass
 #    i = 0
 #    for s in rows:
 #        s[i] = models.PositiveIntegerField(default=0)
