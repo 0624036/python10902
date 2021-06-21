@@ -3,8 +3,10 @@
 {% block headmessage %}<h1>2021年02月份人流折線圖</h1>{% endblock %}
 {% block content %}
 
-<input type ="button" style="background-color: lightgray;width: 200px;height: 50px;" onclick="history.back()" value="回到上一頁"></input>
-<canvas id="myChart" width="400" height="250"></canvas>
+<div style="text-align: center; width: auto;">
+<input type ="button" style="text-align: center; font-family: DFKai-sb; font-size: 25px; border-radius: 20px; background-color: lightgray;width: 200px;height: 50px;" onclick="history.back()" value="回到上一頁"></input>
+</div>
+<canvas id="myChart" style="background-color: rgba(245, 245, 245, 0.8); opacity: 1;" width="400" height="250"></canvas>
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {

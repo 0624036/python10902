@@ -3,7 +3,9 @@
 {% block headmessage %}<h1>2021年02月份人流統計</h1>{% endblock %}
 {% block content %}
 
-<input type="button" style="background-color: lightpink; border-color: steelblue; width: 200px; height: 50px;" value="繪製圖表" onclick="location.href='/202102/draw/'">
+<div style="text-align: center; width: auto;">
+<input type="button" style="text-align: center; font-family: DFKai-sb; font-size: 25px; border-radius: 20px; background-color: lightpink; border-color: steelblue; width: 200px; height: 50px;" value="繪製圖表！" onclick="location.href='/202102/draw/'">
+</div>
 <table class='table table-striped table-bordered' border="1" bgcolor="#FAF0E6">
 	<tr bgcolor="#D3D3D3"><td>日期</td><td>人數</td></tr>
 {% for i in visitor_data %}
