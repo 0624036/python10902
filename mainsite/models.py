@@ -1,7 +1,5 @@
 from django.db import models
 from django.utils import timezone
-import os
-import csv
 # Create your models here.
 
 class Post(models.Model):
@@ -16,14 +14,32 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-class StationTRTC(models.Model):
-    """with open('../staticfiles/station_TPTC.csv','r', encoding='utf-8-sig', newline='') as csvFile:
-        reader = csv.reader(csvFile, delimiter=',')
-        for row in reader:
-            pass
-    """
-#    i = 0
-#    for s in rows:
-#        s[i] = models.PositiveIntegerField(default=0)
-#        i = i+1 
+class Visitor_202101(models.Model):
+    date = models.CharField(max_length=10)
+    number = models.PositiveIntegerField(default=0)
+    def __str__(self):
+        return self.date
 
+class Visitor_202102(models.Model):
+    date = models.CharField(max_length=10)
+    number = models.PositiveIntegerField(default=0)
+    def __str__(self):
+        return self.date
+
+class Visitor_202103(models.Model):
+    date = models.CharField(max_length=10)
+    number = models.PositiveIntegerField(default=0)
+    def __str__(self):
+        return self.date
+
+class Visitor_202104(models.Model):
+    date = models.CharField(max_length=10)
+    number = models.PositiveIntegerField(default=0)
+    def __str__(self):
+        return self.date
+
+class Visitor_202105(models.Model):
+    date = models.CharField(max_length=10)
+    number = models.PositiveIntegerField(default=0)
+    def __str__(self):
+        return self.date
