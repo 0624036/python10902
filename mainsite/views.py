@@ -52,6 +52,46 @@ def show202101(request):
     except:
         return redirect('/')
     return render(request, "202101.html", locals())
+
+def show202105draw(request):
+    try:
+        visitor_data = Visitor_202105.objects.all()
+        title_date = "2021年05月份" 
+    except:
+        return redirect('/')
+    return render(request, "202105draw.html", locals())
+
+def show202104draw(request):
+    try:
+        visitor_data = Visitor_202104.objects.all()
+        title_date = "2021年04月份" 
+    except:
+        return redirect('/')
+    return render(request, "202104draw.html", locals())
+
+def show202103draw(request):
+    try:
+        visitor_data = Visitor_202103.objects.all()
+        title_date = "2021年03月份" 
+    except:
+        return redirect('/')
+    return render(request, "202103draw.html", locals())
+
+def show202102draw(request):
+    try:
+        visitor_data = Visitor_202102.objects.all()
+        title_date = "2021年02月份" 
+    except:
+        return redirect('/')
+    return render(request, "202102draw.html", locals())
+
+def show202101draw(request):
+    try:
+        visitor_data = Visitor_202101.objects.all()
+        title_date = "2021年01月份" 
+    except:
+        return redirect('/')
+    return render(request, "202101draw.html", locals())
 """
 def show(request, id):
     try:

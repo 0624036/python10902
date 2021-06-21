@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}2021年02月份北捷流量{% endblock %}
+{% block headmessage %}<h1>2021年02月份人流折線圖</h1>{% endblock %}
+{% block content %}
+
+<input type ="button" style="background-color: lightgray;width: 200px;height: 50px;" onclick="history.back()" value="回到上一頁"></input>
+<canvas id="myChart" width="400" height="250"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [
+        {% for d in visitor_data %}
+            '{{ d.date }}',
+        {% endfor %}
+        ],
+        datasets: [{
+            label: '2021年02月份統計數據',
+            data: [
+            {% for d in visitor_data %}
+                {{ d.number }},
+            {% endfor %}
+            ],
+            backgroundColor: [
+                'rgba(0, 0, 0, 1)'
+            ],
+            borderColor: [
+                'rgba(0, 0, 0, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+{% endblock %}

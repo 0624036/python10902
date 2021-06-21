@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mainsite.views import index, show202105, show202104, show202103, show202102, show202101, logout
+from mainsite.views import index, show202105, show202104, show202103, show202102, show202101, show202105draw, show202104draw, show202103draw, show202102draw, show202101draw, logout
 
 
 urlpatterns = [
@@ -25,6 +25,11 @@ urlpatterns = [
     path('202103/', show202103),
     path('202102/', show202102),
     path('202101/', show202101),
+    path('202105/draw/', show202105draw),
+    path('202104/draw/', show202104draw),
+    path('202103/draw/', show202103draw),
+    path('202102/draw/', show202102draw),
+    path('202101/draw/', show202101draw),
     path('logout/', logout),
     path('', index),
 ]
